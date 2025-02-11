@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.djc.ft_testingapp.R
 import com.djc.ft_testingapp.databinding.FragmentFaceRecordBinding
 import com.djc.ft_testingapp.databinding.FragmentRegisterBinding
@@ -17,6 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RegisterFragment : Fragment() {
+
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
@@ -35,6 +38,9 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUI()
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
+            findNavController().popBackStack(R.id.mainFragment, false)
+        }
     }
 
 
@@ -70,6 +76,7 @@ class RegisterFragment : Fragment() {
             else{
 
                 regviewModel.saveUserInfo(binding.editName.text.toString(), binding.editAge.text.toString(), binding.spinnerSex.selectedItem.toString())
+                findNavController().popBackStack(R.id.mainFragment, false)
             }
         }
 

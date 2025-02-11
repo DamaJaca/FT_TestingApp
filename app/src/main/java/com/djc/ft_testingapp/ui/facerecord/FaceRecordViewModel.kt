@@ -14,9 +14,4 @@ class FaceRecordViewModel : ViewModel() {
     fun setBitmap(newFace: Bitmap) {
         _face.value = newFace
     }
-
-    fun clearFace() {
-        _face.value = null
-    }
-
 }

@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
     private val recognitionUseCase: RecognitionUseCase,
-    private val saveUserUseCase: SaveUserUseCase,
+    private val saveUserUseCase: SaveUserUseCase
 ) :ViewModel(){
 
     private val _error = MutableLiveData<String>(null)
@@ -37,6 +37,7 @@ class RegisterViewModel @Inject constructor(
             saveUserUseCase(UserModel(user.value!!.id, name, age, sex))
         }
     }
+
 
 
 }
