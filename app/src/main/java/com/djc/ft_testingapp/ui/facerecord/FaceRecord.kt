@@ -27,6 +27,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.djc.ft_testingapp.databinding.FragmentFaceRecordBinding
+import com.djc.ft_testingapp.ui.register.RegisterViewModel
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.face.FaceDetection
 import com.google.mlkit.vision.face.FaceDetector
@@ -49,6 +50,7 @@ class FaceRecord : Fragment() {
     private val viewModel by activityViewModels<FaceRecordViewModel>()
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUI()
@@ -66,7 +68,6 @@ class FaceRecord : Fragment() {
 
     private fun initUI() {
         checkCameraPermission()
-        initListeners()
 
     }
 

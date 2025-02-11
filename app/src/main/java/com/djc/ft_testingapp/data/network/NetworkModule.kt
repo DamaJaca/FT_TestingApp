@@ -37,7 +37,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun providesModel(@ApplicationContext context: Context): MappedByteBuffer {
-        val fileDescriptor = context.assets.openFd("facenet.tflite")
+        val fileDescriptor = context.assets.openFd("model.tflite")
         val inputStream = FileInputStream(fileDescriptor.fileDescriptor)
         val fileChannel = inputStream.channel
         val startOffset = fileDescriptor.startOffset
