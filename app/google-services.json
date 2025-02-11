@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1015951813050",
+    "project_id": "ft-testing-app",
+    "storage_bucket": "ft-testing-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015951813050:android:81e97bddaff02c3384d583",
+        "android_client_info": {
+          "package_name": "com.djc.ft_testingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeUj-68UsxvgrRIWk6rzeCrdnQxtYYxBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

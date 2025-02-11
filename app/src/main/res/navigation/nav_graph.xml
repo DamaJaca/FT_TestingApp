@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.djc.ft_testingapp.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_faceRecord2"
+            app:destination="@id/faceRecord" />
+        <action
+            android:id="@+id/action_mainFragment_to_recognitionFragment2"
+            app:destination="@id/recognitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faceRecord"
+        android:name="com.djc.ft_testingapp.ui.facerecord.FaceRecord"
+        android:label="fragment_face_record"
+        tools:layout="@layout/fragment_face_record" >
+        <action
+            android:id="@+id/action_faceRecord_to_registerFragment2"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recognitionFragment"
+        android:name="com.djc.ft_testingapp.ui.facetrack.RecognitionFragment"
+        android:label="fragment_recognition"
+        tools:layout="@layout/fragment_recognition" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.djc.ft_testingapp.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+</navigation>
